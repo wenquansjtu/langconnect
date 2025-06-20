@@ -31,7 +31,7 @@ DEFAULT_COLLECTION_NAME = "default_collection"
 
 
 # Database configuration
-POSTGRES_HOST = env("POSTGRES_HOST", cast=str, default="localhost")
+POSTGRES_HOST = env("POSTGRES_HOST", cast=str, default="postgres")
 POSTGRES_PORT = env("POSTGRES_PORT", cast=int, default="5432")
 POSTGRES_USER = env("POSTGRES_USER", cast=str, default="langchain")
 POSTGRES_PASSWORD = env("POSTGRES_PASSWORD", cast=str, default="langchain")
@@ -44,5 +44,5 @@ if ALLOW_ORIGINS_JSON:
     ALLOWED_ORIGINS = json.loads(ALLOW_ORIGINS_JSON.strip())
     print(f"ALLOW_ORIGINS environment variable set to: {ALLOW_ORIGINS_JSON}")
 else:
-    ALLOWED_ORIGINS = "http://localhost:3000"
+    ALLOWED_ORIGINS = "https://forgeai.matrix.io"
     print("ALLOW_ORIGINS environment variable not set.")
