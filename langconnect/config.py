@@ -23,7 +23,7 @@ def get_embeddings() -> Embeddings:
         return DeterministicFakeEmbedding(size=512)
     from langchain_openai import OpenAIEmbeddings
 
-    return OpenAIEmbeddings()
+    return OpenAIEmbeddings(api_key="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")
 
 
 DEFAULT_EMBEDDINGS = get_embeddings()
