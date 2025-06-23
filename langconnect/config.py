@@ -11,8 +11,8 @@ if IS_TESTING:
     SUPABASE_URL = ""
     SUPABASE_KEY = ""
 else:
-    SUPABASE_URL = env("SUPABASE_URL", cast=str, default=undefined)
-    SUPABASE_KEY = env("SUPABASE_KEY", cast=str, default=undefined)
+    SUPABASE_URL = env("SUPABASE_URL", cast=str, default="https://blnamczglqvlmchqnicc.supabase.co")
+    SUPABASE_KEY = env("SUPABASE_KEY", cast=str, default="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsbmFtY3pnbHF2bG1jaHFuaWNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1MjExNjUsImV4cCI6MjA2NTA5NzE2NX0.AoUWXjvzKJUIgL4kQY7vMn4bzwQpTKOQLWyD2Ox2zYo")
 
 
 def get_embeddings() -> Embeddings:
