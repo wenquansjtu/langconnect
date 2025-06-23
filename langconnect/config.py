@@ -38,7 +38,7 @@ POSTGRES_PASSWORD = env("POSTGRES_PASSWORD", cast=str, default="langchain")
 POSTGRES_DB = env("POSTGRES_DB", cast=str, default="langchain_test")
 
 # Read allowed origins from environment variable
-ALLOW_ORIGINS_JSON = env("ALLOW_ORIGINS", cast=str, default="["http://localhost:3000","https://forgeai.matrix.io"]")
+ALLOW_ORIGINS_JSON = env("ALLOW_ORIGINS", cast=str, default="["https://forgeai.matrix.io"]")
 
 if ALLOW_ORIGINS_JSON:
     ALLOWED_ORIGINS = json.loads(ALLOW_ORIGINS_JSON.strip())
